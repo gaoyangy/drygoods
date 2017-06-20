@@ -15,34 +15,38 @@
     </template>
     <script>
 export default {
-            data() {
-              return{
-                answers: [ 
-                    { "id": 1, "name": "A" },
-                    { "id": 2, "name": "B" }, 
-                    { "id": 3, "name": "C" }, 
-                    { "id": 4, "name": "D" }
-                ],
-                selected: []
-              }
+    data() {
+        return{
+            answers: [ 
+                { "id": 1, "name": "A" },
+                { "id": 2, "name": "B" }, 
+                { "id": 3, "name": "C" }, 
+                { "id": 4, "name": "D" }
+            ],
+            selected: []
+        }
+    },
+    computed: {
+        selectAll: {
+            get: function () {
+                return this.answers ? this.selected.length == this.answers.length : false;
             },
-            computed: {
-                selectAll: {
-                    get: function () {
-                        return this.answers ? this.selected.length == this.answers.length : false;
-                    },
-                    set: function (value) {
-                        var selected = [];
+            set: function (value) {
+                var selected = [];
 
-                        if (value) {
-                            this.answers.forEach(function (user) {
-                                selected.push(user.id);
-                            });
-                        }
-
-                        this.selected = selected;
-                    }
+                if (value) {
+                    this.answers.forEach(function (user) {
+                        selected.push(user.id);
+                    });
                 }
+
+                this.selected = selected;
             }
-        };
+        }
+    }
+};
     </script>
+    <style lang="sass">
+        sapn
+            color: red
+    </style>
