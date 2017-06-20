@@ -3,7 +3,7 @@ var path = require('path')
 var api = {
     mockhttp: "http://localhost:3000", //本地模拟数据
     testhttp: "http://localhost:3001", //访问后台数据
-    production: "49.4.143.238:3001" //访问线上后端数据
+    produchttp: "http://119.23.230.185:3001" //访问线上后端数据
 }
 module.exports = {
     build: {
@@ -27,17 +27,17 @@ module.exports = {
     },
     dev: {
         env: require('./dev.env'),
-        port: 8080,
+        port: 1080,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
             '/auth': {
-                target: api.testhttp,
+                target: api.produchttp,
                 changeOrigin: true
             },
             '/api': {
-                target: api.testhttp,
+                target: api.produchttp,
                 changeOrigin: true
             }
         },
