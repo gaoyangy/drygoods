@@ -1,6 +1,6 @@
 #!/bin/bash
  
-WEB_PATH='/usr/local/drygoods'
+WEB_PATH='/usr/local/nginx/drygoods/'
  
 echo "Start deployment"
 cd $WEB_PATH
