@@ -1,9 +1,9 @@
 #!/bin/bash
  
-WEB_PATH='/usr/local/nginx/drygoods/'
+#WEB_PATH='/usr/local/nginx/drygoods/'
  
 echo "Start deployment"
-cd $WEB_PATH
+cd /usr/local/nginx/drygoods/
 echo "pulling source code..."
 git pull
 echo "changing permissions..."
