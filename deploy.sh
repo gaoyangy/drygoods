@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="/var/log/blog_deploy.log"
+LOG_FILE="../var/log/blog_deploy.log"
 
 date >> "$LOG_FILE"
 echo "Start deployment" >>"$LOG_FILE"
