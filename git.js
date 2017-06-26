@@ -1,6 +1,6 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
-var handler = createHandler({ path: '../usr/local/nginx/drygoods', secret: 'myHashSecret' }) 
+var handler = createHandler({ path: '/gitpull', secret: 'myHashSecret' }) 
 // 上面的 secret 保持和 GitHub 后台设置的一致
 
 function run_cmd(cmd, args, callback) {
@@ -15,7 +15,7 @@ function run_cmd(cmd, args, callback) {
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
     res.statusCode = 404
-    res.end('no such location')
+    res.end('no such location',err)
   })
 }).listen(9988)
 
