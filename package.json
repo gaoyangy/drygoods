@@ -1,6 +1,6 @@
 {
-  "name": "goods",
-  "version": "1.0.0",
+  "name": "干货",
+  "version": "1.0.1",
   "description": "A Vue.js & Koa project",
   "author": "gaoyangyang",
   "private": true,

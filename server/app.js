@@ -49,7 +49,7 @@ koa.use("/api", jwt({ secret: 'vue-koa-demo' }), api.routes()); // 所有走/api
 app.use(koa.routes()); // 将路由规则挂载到Koa上。
 app.use(historyApiFallback());
 app.use(serve(path.resolve('../dist'))); // 将webpack打包好的项目目录作为Koa静态文件服务的目录
-app.listen(3001, () => {
-    console.log('Koa  listening  3001');
+app.listen(3000, () => {
+    console.log('Koa  listening  3000');
 });
 module.exports = app;

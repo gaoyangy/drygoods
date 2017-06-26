@@ -51,5 +51,6 @@ module.exports = {
         // just be aware of this issue when enabling this option.
         cssSourceMap: true
     },
-    isNpm：false
+    isNpm：true,
+    isProduce: true
 }

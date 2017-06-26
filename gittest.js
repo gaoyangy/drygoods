@@ -12,9 +12,15 @@ var deployServer = http.createServer(function(request, response) {
         'cd ' + PATH,
         'git pull',
         'npm install',
-        'npm run build'
+        'npm run build'       //如果本地没有编译而且有安装过其他插件
       ]
-    }else{
+    }
+    if(config.isProduce){
+        'cd ' + PATH,
+        'git pull',
+        'cp -rf dist/* /www'     //发布线上
+    }
+    else{
     var commands = [
       'cd ' + PATH,
       'git pull'
