@@ -19,6 +19,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "faker": "^4.1.0",
     "fs": "0.0.1-security",
+    "github-webhook-handler": "^0.6.0",
     "json-server": "^0.10.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
