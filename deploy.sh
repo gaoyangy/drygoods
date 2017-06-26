@@ -6,5 +6,6 @@ echo "Start deployment"
 cd /usr/local/nginx/drygoods/
 echo "pulling source code..."
 git pull
+
 echo "changing permissions..."
 echo "Finished."
