@@ -9,10 +9,10 @@ var api = {
 module.exports = {
     build: {
         env: require('./prod.env'),
-        // index: path.resolve(__dirname, '../../dist/index.html'),
-        // assetsRoot: path.resolve(__dirname, '../../dist'),
-        index: path.resolve(__dirname, '../../gaoyangy.github.io/index.html'),
-        assetsRoot: path.resolve(__dirname, '../../gaoyangy.github.io'),
+        index: path.resolve(__dirname, '../../dist/index.html'),
+        assetsRoot: path.resolve(__dirname, '../../dist'),
+        // index: path.resolve(__dirname, '../../gaoyangy.github.io/index.html'),
+        // assetsRoot: path.resolve(__dirname, '../../gaoyangy.github.io'),
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         productionSourceMap: true,
