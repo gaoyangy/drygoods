@@ -10,7 +10,6 @@
         "server": "node server/app.js",
         "mock": "json-server --watch src/mock/faker-data.js",
         "mockdev": "npm run mock && npm run build/dev-server"
-
     },
     "dependencies": {
         "axios": "^0.15.3",
