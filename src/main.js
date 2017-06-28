@@ -13,8 +13,17 @@ Vue.prototype.$http = Axios // 类似于vue-resource的调用方法
 Vue.use(ElementUI);
 Vue.use(VueQuillEditor)
 
-
-/* eslint-disable no-new */
+Vue.config.errorHandler = function(err, vm) {
+        var componentName = Vue.util.formatComponentName(vm),
+            propsData = vm.$options.propsData;
+        fundebug.notifyError(err, {
+            metaData: {
+                componentName: componentName,
+                propsData: propsData
+            }
+        });
+    }
+    /* eslint-disable no-new */
 const app = new Vue({
     router: router,
     render: h => h(App)
