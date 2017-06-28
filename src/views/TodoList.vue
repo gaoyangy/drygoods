@@ -3,7 +3,7 @@
   <el-row>
     <el-col :span="24">
       <div class="grid-content bg-purple-dark nav-light-blue">
-      <<router-link to="/test">test</router-link>
+      <router-link to="/test">test</router-link>
        <span>
         欢迎：{{name}}！你的待办事项是：
       </span>
