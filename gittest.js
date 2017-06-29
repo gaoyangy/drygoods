@@ -1,6 +1,6 @@
 var http = require('http'),
     exec = require('exec'),
-    config = require('config/index.js')
+    config = require('./config/index.js')
 
 const PORT = 9988,
     PATH = '/'
