@@ -3,7 +3,7 @@ var http = require('http'),
     config = require('./config/index.js')
 
 const PORT = 9988,
-    PATH = '/'
+    PATH = '../drygoods/'
 
 var deployServer = http.createServer(function(request, response) {
     if (request.url.search(/gitpull\/?$/i) > 0) {
@@ -41,10 +41,8 @@ var deployServer = http.createServer(function(request, response) {
         })
 
     } else {
-
         response.writeHead(404)
         response.end('Not Found.' + new Date());
-
     }
 })
 
