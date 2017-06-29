@@ -3,7 +3,7 @@ var http = require('http'),
     config = require('config/index.js')
 
 const PORT = 9988,
-    PATH = '/usr/local/nginx/drygoods/'
+    PATH = '../drygoods/'
 
 var deployServer = http.createServer(function(request, response) {
     if (request.url.search(/gitpull\/?$/i) > 0) {
@@ -18,23 +18,25 @@ var deployServer = http.createServer(function(request, response) {
         if (config.isProduce) {
             'cd ' + PATH,
             'git pull',
+            'npm run build',
             'cp -rf dist/* /www' //发布线上
         } else {
             var commands = [
                 'cd ' + PATH,
-                'git pull'
+                'git pull',
+                'npm run build'
             ].join(' && ')
         }
         exec(commands, function(err, out, code) {
             if (err instanceof Error) {
                 response.writeHead(500)
-                response.end('Server Internal Error.')
+                response.end('Server Internal Error.'+new Date())
                 throw err
             }
             process.stderr.write(err)
             process.stdout.write(out)
             response.writeHead(200)
-            response.end('Deploy Done.')
+            response.end('Deploy Done.'+new Date())
 
         })
 

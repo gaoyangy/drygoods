@@ -7,4 +7,3 @@ router.delete('/todolist/:userId/:id', api.removeTodolist),
 router.put('/todolist/:userId/:id/:status', api.updateTodolist)
 
 module.exports = router;
-
