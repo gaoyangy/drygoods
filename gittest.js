@@ -3,7 +3,7 @@ var http = require('http'),
     config = require('config/index.js')
 
 const PORT = 9988,
-    PATH = '../drygoods/'
+    PATH = '/'
 
 var deployServer = http.createServer(function(request, response) {
     if (request.url.search(/gitpull\/?$/i) > 0) {
