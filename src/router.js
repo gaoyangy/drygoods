@@ -2,55 +2,26 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 //首页
-import Content from './views/content/Content'
-import Right from './views/right/Right'
-// import Logins from './views/commen/Logins'
-//专题
-import Rspecial from './views/right/Rspecial'
-import Cspecial from './views/content/Cspecial'
-//发现
-import Rfind from './views/right/Rfind'
-import Cfind from './views/content/Cfind'
-
+import Home from './views/home/Home'
+import Top from './views/top/Top'
 
 //内容组件 右侧内容
 Vue.use(VueRouter)
 const router = new VueRouter({
+    hash: true,
     mode: 'history',
     base: __dirname,
     routes: [{
-            path: '/index',
+            path: '/',
             components: {
-                content: Content,
-                right: Right,
-
-
-            }
-        },
-        {
-            path: '/find',
-            components: {
-                content: Cfind,
-                right: Rfind,
-
-
-            }
-        },
-        {
-
-            path: '/special',
-            components: {
-                content: Cspecial,
-                right: Rspecial,
-
-
+                default: Home,
+                top: Top
             }
         },
         {
             path: '*',
-            redirect: '/index'
+            redirect: '/'
         }
-
     ]
 })
 
