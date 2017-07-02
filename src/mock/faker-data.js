@@ -22,6 +22,7 @@ module.exports = function() {
             return {
                 id: '1233' + n,
                 name: "又一家共享单车倒闭！创始人：再不看好共享单车了",
+                buildTime: faker.date.recent(),
                 tag: [
                     { text: "node", value: "1" },
                     { text: "linux", value: "2" },

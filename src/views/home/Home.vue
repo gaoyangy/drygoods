@@ -3,7 +3,10 @@
         <el-col :span="16" :offset="4">
             <div class="article-list" v-for="item in articleList">
               <div class="article-header">
-                <h3 class="article-title">标题：{{item.name}}</h3>
+                <h3 class="article-title">
+                  <a>标题：{{item.name}}</a>
+                  <span class="build-time">发布日期：{{item.buildTime}}</span>
+                </h3>
                 <div class="article-info">
                   标签：
                   <el-tag
