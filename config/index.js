@@ -43,13 +43,13 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            '/auth': {
-                target: api.produchttp,
-                changeOrigin: true
-            },
-            '/api': {
-                target: api.produchttp,
-                changeOrigin: true
+            // '/': {
+            //     target: api.mockhttp,
+            //     changeOrigin: true
+            // },
+            '/list': {
+                target: "http://localhost:3000",
+                changeOrigin: false
             }
         },
         // CSS Sourcemaps off by default because relative paths are "buggy"
