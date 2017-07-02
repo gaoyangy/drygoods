@@ -43,10 +43,10 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            // '/': {
-            //     target: api.mockhttp,
-            //     changeOrigin: true
-            // },
+            '/auth': {
+                target: api.produchttp,
+                changeOrigin: true
+            },
             '/list': {
                 target: "http://localhost:3000",
                 changeOrigin: false

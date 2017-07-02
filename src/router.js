@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 //首页
 import Home from './views/home/Home'
 import Top from './views/top/Top'
+import Sign from './views/sign/Sign'
 
 //内容组件 右侧内容
 Vue.use(VueRouter)
@@ -17,6 +18,10 @@ const router = new VueRouter({
                 default: Home,
                 top: Top
             }
+        },
+        {
+            path: '/sign',
+            component: Sign
         },
         {
             path: '*',

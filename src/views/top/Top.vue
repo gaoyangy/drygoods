@@ -6,9 +6,8 @@
   </el-col>
   <el-col :span="4" :offset="6">
       <div class="grid-content">
-          <a>个人中心</a>
-          <a>登陆</a>
-          <a>注册</a>
+          <router-link class="goto" to="/sign">个人中心</router-link>
+          <router-link class="goto" to="/sign">登陆</router-link>
       </div>
   </el-col>
 </el-row>
