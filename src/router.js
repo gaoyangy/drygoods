@@ -5,11 +5,12 @@ import VueRouter from 'vue-router'
 import Home from './views/home/Home'
 import Top from './views/top/Top'
 import Sign from './views/sign/Sign'
+import User from './views/user/User'
+import Nav from './views/nav/Nav'
 
 //内容组件 右侧内容
 Vue.use(VueRouter)
 const router = new VueRouter({
-    hash: true,
     mode: 'history',
     base: __dirname,
     routes: [{
@@ -22,6 +23,14 @@ const router = new VueRouter({
         {
             path: '/sign',
             component: Sign
+        },
+        {
+            path: '/user:id?',
+            components: {
+                default: User,
+                nav: Nav,
+                top: Top
+            }
         },
         {
             path: '*',

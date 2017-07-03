@@ -6,7 +6,7 @@
   </el-col>
   <el-col :span="4" :offset="6">
       <div class="grid-content">
-          <router-link class="goto" to="/sign">个人中心</router-link>
+          <router-link v-if="token" class="goto" to="/user">个人中心</router-link>
           <router-link class="goto" to="/sign">登陆</router-link>
       </div>
   </el-col>
@@ -17,10 +17,17 @@
 export default {
 data() {
     return{
-
+        token:""
     }
 },
 computed: {
+},
+mounted(){
+        const token = sessionStorage.getItem('access-token')
+        if(token||token!=null){
+            this.$router.push('/')
+        }
+        this.token=token;
 }
 };
 </script>
