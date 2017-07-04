@@ -31,6 +31,7 @@ const postUserAuth = async function(ctx) {
             ctx.body = {
                 success: true,
                 token: token, // 返回token
+                id: userInfo.id
             }
         }
     } else {
