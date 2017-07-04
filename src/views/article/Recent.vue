@@ -1,5 +1,6 @@
 <template>
-<div class="user">
+<div class="recent">
+recent
 </div>
 </template>
 <script>

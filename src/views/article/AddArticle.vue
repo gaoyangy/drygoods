@@ -1,5 +1,6 @@
 <template>
-<div class="user">
+<div class="addarticle">
+addarticle
 </div>
 </template>
 <script>
