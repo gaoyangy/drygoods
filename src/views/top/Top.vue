@@ -25,9 +25,12 @@ data() {
 },
 computed: {
 },
+watch:{
+
+},
 mounted(){
         const token = sessionStorage.getItem('access-token')
-        if(token||token!=null){
+        if(token&&token!=null){
             this.token=token;
         }
 }
